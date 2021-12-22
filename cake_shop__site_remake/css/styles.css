@@ -1,0 +1,317 @@
+@charset 'utf-8';
+
+/* 基本要素の指定 */
+body{
+    font-family: "ヒイラギ角ゴ ProN W3", "Meiryo" , sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #FFF;
+    line-height: 1.75;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+/* 各ブロックの指定 */
+.header{
+    position: relative;
+    /* 親要素にとりあえず書いておくことで、
+    子要素はabsoluteで親を基準に移動することができる */
+    width: 960px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.main{
+    padding: 0;
+    width: 960px;
+    margin: 5em auto;
+}
+
+.footer{
+    width: 100%;
+    height: 60px;
+    margin: 1em auto;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* a要素の指定 */
+a{
+    color: #9B885C;
+    text-decoration: none;
+}
+
+a img{
+    border: none;
+}
+
+a:visited{ /* 訪問済みのリンクの文字色 */
+    color: #363431;
+}
+
+a:hover{ 
+    color: #36322b;
+}
+
+/* p要素の指定 */
+p{
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+/* ヘッダー部分・ヘッダーロゴ */
+.header_logo{
+    height: 50px;
+}
+
+/* ヘッダー部分・ナビゲーション */
+.header_nav{
+    position: absolute;
+    /* 親要素relativeが書いてあるので、
+    子要素は親を基準にabsoluteで移動することができる。
+    親とセットで使う。子要素だけに設定すると
+    思ったように制御しずらい */
+    top: 20px;/* positionプロパティとセットで使う */
+    right: 0px;/* positionプロパティとセットで使う */
+
+    width: 60%;
+    text-align: right;
+}
+
+.header_nav li{
+    display: inline-block;
+    /* block要素のように高さや縦方向の
+    padding、marginが指定できる上に、
+    inline要素のように横並びができ、
+    しかも高さが異なるボックスがあっても、
+    レイアウトが崩れない。 */
+    margin-left: 2em;
+    font-size: 16px;
+}
+/* ヘッダー部分・メインビジュアル */
+.header_mainvisual{
+    width: 100%;
+    height: 480px;
+    background-image: url(../images/mainvisual.png);
+    background-repeat: no-repeat;/* 画像をリピートしない */
+    background-size: cover;
+    /* 元画像の縦横比は保持して、
+    要素をちょうどよく覆うサイズにする。 */
+}
+/* メインビジュアル中のテキストを非表示 */
+.header_mainvisual p{
+    visibility: hidden;
+    /* visibility: hiddenは名の通り、
+    要素はあるけど見えない状態。
+    display:none葉要素も取得されず、
+    完全にその場にない扱い。 */
+}
+
+/* main要素内にある各要素の指定 */
+.main h2{
+    font-family: 'Courgette',cursive;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.main h2 span{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+.main blockquote{
+    font-family: serif;
+    color: #333;
+}
+
+.main blockquote p{
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.main blockquote cite{/* citation 出典元　著書 */
+    font-size: 16px;
+    font-style: normal;/* italic,oblique */
+}
+/* キャッチコピー */
+.catchphrase{
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+/* バナーエリア */
+.featured_area{
+    margin-bottom: 4em;
+    overflow: auto;
+    /* overflow プロパティをデフォルト値（visible）以外の
+    値にすると自分の範囲内に存在するフロートした要素を認識して
+    その高さを知り、囲むことができるようになる。 */
+}
+
+.featured{
+    width: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+    /* 親要素にoverflow: auto;が記述されているので
+    clearプロパティの記述の必要がない。
+    ただし、推奨はclearプロパティ。 */
+}
+
+
+.featured img{
+    max-width: 100%;
+    /* 表示される最大値をオリジナル以上に拡大しないようにする。 */
+    width: 100%;
+}
+
+.featured h3{
+    margin: 8px 0;
+    color: #613e00;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.featured p{
+    font-size: 14px;
+}
+
+.featured .link_button{
+    display: block;
+    /* ヒット領域を増やすために横幅を指定するには、
+    inlineのままでは不可であるため、blockにする。 */
+    width: 300px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #613e00;
+}
+
+.featured .link_button:visited{
+    color: #363431;
+}
+
+.featured .link_button:hover{
+    color: #363431;
+}
+
+.newsbox{
+    width: 100%;
+    background-color: #e5dcb7;
+    border: solid 1px #613e00;
+}
+
+.date{
+    float: left;
+    padding-top: 15px;
+    margin-left: 20px;
+}
+
+.news-content{
+    margin-left: 200px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+/* メールアドレス登録エリア */
+
+p img{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    background-repeat: no-repeat;/* 画像をリピートしない */
+    background-size: cover;
+    position: relative;
+}
+
+/* フッター部分・背景ビジュアル */
+.footer_mainvisual{
+    width: 100%;
+    height: 480px;
+    background-image: url(../images/footervisu.jpg);
+    background-repeat: no-repeat;/* 画像をリピートしない */
+    background-size: cover;
+    position: absolute;
+    /* 元画像の縦横比は保持して、
+    要素をちょうどよく覆うサイズにする。 */
+}
+
+/* footer中のテキストを非表示 */
+.footer_mainvisual p{
+    visibility: hidden;
+    /* visibility: hiddenは名の通り、
+    要素はあるけど見えない状態。
+    display:none葉要素も取得されず、
+    完全にその場にない扱い。 */
+}
+
+.filter{
+    width: 100%;
+    height: 480px;
+    background-color: rgba(232, 235, 217, 0.315);
+    backdrop-filter: blur(5px);
+}
+
+.registration{
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 0;
+}
+
+.copyright{
+    top: 300px;
+    position: relative;
+}
+
+.registration p{
+    margin: 2em 0;
+}
+/* form要素 */
+form input[type=email]{
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: .5em .5em;
+    width: 300px;
+    height: 1.4em;/* 入力エリアの高さを文字サイズの1.4倍にする。 */
+    background-color: #fefff4;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+    /* 文字サイズ16pxを1.5倍にした24pxが行間の高さ。
+    文字サイズ16pxを引くと8px。
+    それを2で割った値4pxが文字の上下に隙間として付与される */
+    z-index: 9999;
+}
+
+
+/* 送信ボタン */
+form button{
+    padding: .5em 2em;
+    border: none;
+    border-radius: 4px;
+    color: #333333;
+    background-color: #e5dcb7;
+    border: solid 1px #613e00;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+form button:hover{
+    background-color: #e5dcb7;
+}
+
+/* 青い枠線を消す */
+form input[type="email"]:focus,
+/* <input>要素のautofocus属性を指定すると、
+ウェブページが表示された際に指定した入力値に
+カーソルが当たって自動的にフォーカスされます。 */
+form button:focus{
+    outline: 0;
+}
