@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="discription" content="ガトのサイトです。">
+    <meta name="keywords" content="カフェ,・ランチ,・ディナー">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>gâteau</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+</head>
+<body>
+    <div id="cursor"></div>
+    <!--コンテンツ-->
+    <div class="container">
+        <!--ヘッダー-->
+        <header class="header">
+            <h1 class="header_logo"><a href="index.html"><img src="images/logo.jpg" alt="ガトロゴ" height="50px"></a></h1>
+
+            <!-- <div id="drawer_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> -->
+
+            <!-- ナビゲーション -->
+            <nav class="header_nav" id="global_nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="event.html">EVENT</a></li>
+                    <li><a href="access.html">ACCESS</a></li>
+                    <li><a href="recruit.html">RECRUIT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- メインビジュアル -->
+        <div class="header_mainvisual">
+            <p>ガトの店内</p>
+        </div><!-- /.header_mainvisual -->
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <!-- セクション・キャッチコピー -->
+            <section class="catchphrase">
+                <h2>gâteau<br><span>ガトとは</span></h2>
+                <blockquote>
+                    <p>
+                        私たちは、流行を追わない。<br>
+                        哲学をもたない繁盛店は、いともたやすく時代に流されてしまうのを知っているから。<br>
+                        私たちは、常に「本当」を問いかけ、「本物」を目指す。そのために”いまある、あたりまえ”を、敬意をもって疑い、ファッション、カルチャー、<br>
+                        アート…、あらゆるジャンルに貪欲にアンテナを張り、良識と知見をもって食を通した新しい価値を発見・検証し、普遍化していこう。
+                    </p>
+                </blockquote>
+            </section>
+            <!-- セクション・店舗紹介 -->
+            <section class="featured_area">
+                <h2>gâteau<br><span>ガトとは</span></h2>
+                <section class="featured">
+                    <img src="images/event_info.png" alt="イベント情報">
+                    <h3>イベント情報</h3>
+                    <p>季節のケーキのご注文・ウェディングケーキも承っております。</p>
+                    <p><a href="#" class="link_button">注文はこちら…</a></p>
+                </section><!-- /.featured -->
+
+                <section class="featured">
+                    <img src="images/shop_info.png" alt="店舗情報">
+                    <h3>店舗情報</h3>
+                    <p>店舗ごとに営業時間や限定商品が異なる場合があります。</p>
+                    <p><a href="#" class="link_button">全国の店舗情報はこちら…</a></p>
+                </section><!-- /.featured -->
+
+
+                <section class="featured">
+                    <img src="images/recruit_info.png" alt="採用情報">
+                    <h3>採用情報</h3>
+                    <p>ともに成長しあえる仲間を募集しています。</p>
+                    <p><a href="#" class="link_button">新卒採用・中途採用はこちら…</a></p>
+                </section><!-- /.featured -->
+
+            </section><!-- /.featured_area -->
+            <section class="news">
+                <h2>gâteau<br><span>ニュース</span></h2>
+                <div class="newsbox">
+                    <h3 class="date">2021年10月11日</h3>　
+                    <p class="news-content">
+                        新規サイトオープン企画　Ｗｅｂサイトを見て特製ケーキをもらおう！
+                    </p>
+                </div>
+                <div class="newsbox">
+                    <h3 class="date">2021年10月11日</h3>　
+                    <p class="news-content">
+                        新作マカロン登場！！
+                    </p>
+                </div>
+                <div class="newsbox">
+                    <h3 class="date">2021年10月11日</h3>　
+                    <p class="news-content">
+                        お待たせ致しました！カフェ・ド・パリＷｅｂサイトをオープン致しました。 
+                    </p>
+                </div>
+            </section>
+        </main>
+            <!-- セクション・メンバー登録 -->
+        
+        <footer class="footer">
+            <div class="footer_mainvisual">
+             <p>フッター背景</p>
+            </div><!-- /.footer_mainvisual -->
+            <div class="filter">
+            <section class="registration">
+                <p>
+                    メンバー登録すると最新情報が受け取れます！<br>
+                    メールアドレスを登録しよう！
+                </p>
+                <form methd="post" action="/">
+                    <input type="email" name="mail" placeholder="e-mail">
+                    <button type="submit">登録する</button>
+                </form>
+            </section><!-- /.registration -->
+            <small class="copyright">Copyright 2022 gâteau</small>
+            </div>
+        </footer>
+    </div><!--/.container-->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            // 1. 上からスライド
+            $("#drawer_toggle").click(function(){
+                $(this).toggleClass("open");
+                $("#global_nav").slideToggle();
+            });
+            
+            //2. フェードイン
+            // $("#drawer_toggle").click(function(){
+            // 	$(this).toggleClass("open");
+            // 	$("#global_nav").fadeToggle();
+            // });
+    
+            // 3. 横からスライド
+            // $("#drawer_toggle").click(function(){
+            //     $(this).toggleClass("open");
+            //     $("#global_nav").toggleClass("sp_open");
+            // });
+        });
+    </script> -->
+    <script src="js/cursor.js"></script>
+</body>
+</html>
